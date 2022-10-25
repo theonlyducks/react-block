@@ -1,0 +1,36 @@
+{
+    "name": "react-block-duck",
+    "title": "React Block Duck",
+    "version": "1.0.0",
+    "private": false,
+    "description": "Blocking ui lib for react",
+    "author": "Giovane Santos <giovanesantos1999@gmail.com>",
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+
+    },
+    "engines": {
+        "node": ">=16.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/theonlyducks/react-block-duck.git"
+    },
+    "bugs": {
+        "url": "https://github.com/theonlyducks/react-block-duck/issues"
+    },
+    "files": [
+
+    ],
+    "keywords": [
+        "blocking",
+        "react-blocking",
+        "block-ui",
+        "react-block-ui"
+    ],
+    "peerDependencies": {
+        "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
+    }
+}
