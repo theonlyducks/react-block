@@ -1,0 +1,7 @@
+.block-duck {
+    position: relative;
+}
+
+.block-duck .block-duck__container {
+    position: absolute;
+}
