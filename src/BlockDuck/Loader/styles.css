@@ -1,0 +1,40 @@
+.loader .indicator {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 5px solid #0275d8;
+    border-color: #0275d8 transparent transparent transparent;
+    animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.loader .indicator:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.loader .indicator:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.loader .indicator:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

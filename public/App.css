@@ -1,0 +1,24 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container .content {
+    margin-top: 20px;
+}
+
+.content .button {
+    margin-top: 20px;
+    border: none;
+    padding: 8px;
+    height: 35px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #0275d8;
+}
+
+.content .button:hover {
+    filter: brightness(.9);
+}
