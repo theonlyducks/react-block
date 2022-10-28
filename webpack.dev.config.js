@@ -1,7 +1,7 @@
 const path = require('path');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -21,7 +21,7 @@ module.exports = {
         allowedHosts: 'all',
     },
     resolve: {
-        extensions: [ ".js", ".jsx" ]
+        extensions: [".js", ".jsx"]
     },
     plugins: [
         new ProvidePlugin({
@@ -45,8 +45,8 @@ module.exports = {
             {
                 test: /.css$/i,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" },
+                    {loader: "style-loader"},
+                    {loader: "css-loader"},
                 ]
             },
         ]
