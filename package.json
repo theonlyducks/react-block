@@ -10,6 +10,8 @@
     "scripts": {
         "test": "jest",
         "test:coverage": "jest --coverage",
+        "build": "",
+        "publish": "yarn test && ./scripts/publish.sh",
         "start": "webpack serve --progress --config webpack.dev.config.js"
     },
     "engines": {
