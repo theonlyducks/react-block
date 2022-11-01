@@ -3,7 +3,7 @@
     "title": "React Block Duck",
     "version": "1.0.0",
     "private": false,
-    "description": "Blocking ui lib for react",
+    "description": "Simple load integration blocking the UI",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
     "license": "MIT",
     "main": "index.js",

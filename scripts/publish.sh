@@ -24,7 +24,8 @@ if [ -z "$PROJECT_VERSION" ]; then
 fi
 
 git checkout main
-git pull
+git fetch -p
+git pull orgin main
 yarn build
 git tag -a "$PROJECT_VERSION" -m "release $PROJECT_VERSION"
 git push --set-upstream origin "$CURRENT_BRANCH"
