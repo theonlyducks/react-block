@@ -1,14 +1,14 @@
 import './App.css';
 
-import {useState} from "react";
-import {BlockDuck} from "../src";
+import { useState } from "react";
+import { BlockDuck } from "../src";
 
 export function App() {
     const [blocking, setBlocking] = useState();
     return (
         <div className="container">
             <div className="content">
-                <BlockDuck tag="div" blocking={blocking}>
+                <BlockDuck blocking={blocking}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida augue a massa ornare
                     sollicitudin. Aliquam a tortor finibus, fermentum justo ut, lobortis nisl. Curabitur suscipit lectus
                     metus, feugiat pulvinar lectus viverra a. Praesent tincidunt, ex consequat tempus aliquet, turpis ex
