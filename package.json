@@ -1,17 +1,21 @@
 {
-    "name": "react-block-duck",
-    "title": "React Block Duck",
+    "name": "@duck/react-block",
+    "title": "React Block",
     "version": "1.0.0",
     "private": false,
     "description": "Simple load integration blocking the UI",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
     "license": "MIT",
-    "main": "index.js",
+    "main": "dist/blockduck.js",
+    "styles": "dist/style.css",
+    "types": "index.d.ts",
     "scripts": {
+        "coveralls": "coveralls < ./coverage/lcov.info",
         "test": "jest",
         "test:coverage": "jest --coverage",
-        "build": "",
+        "release": "",
         "publish": "yarn test && ./scripts/publish.sh",
+        "build": "webpack --progress --config webpack.prod.config.js",
         "start": "webpack serve --progress --config webpack.dev.config.js"
     },
     "engines": {
@@ -24,11 +28,21 @@
     "bugs": {
         "url": "https://github.com/theonlyducks/react-block-duck/issues"
     },
-    "files": [],
+    "files": [
+        "LICENSE",
+        "README.md",
+        "CHANGELOG.md",
+        "dist",
+        "src/BlockDuck/index.d.ts"
+    ],
     "keywords": [
+        "theonlyducks",
+        "loader",
+        "blockui",
         "blocking",
-        "react-blocking",
         "block-ui",
+        "react-block",
+        "react-blocking",
         "react-block-ui"
     ],
     "peerDependencies": {
@@ -46,12 +60,15 @@
         "babel-loader": "^8.2.5",
         "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.7.1",
+        "css-minimizer-webpack-plugin": "^4.2.2",
         "html-webpack-plugin": "^5.5.0",
         "jest": "^29.2.2",
         "jest-environment-jsdom": "^29.2.2",
+        "mini-css-extract-plugin": "^2.6.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "style-loader": "^3.3.1",
+        "terser-webpack-plugin": "^5.3.6",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-dev-server": "^4.11.1"

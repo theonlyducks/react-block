@@ -1,24 +1,21 @@
 const path = require('path');
+const TerserPlugin = require("terser-webpack-plugin");
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-    mode: "development",
-    devtool: 'source-map',
+    mode: "production",
     entry: {
-        block: path.resolve(__dirname, "public")
+        blockduck: path.resolve(__dirname, "src"),
     },
     output: {
         clean: true,
-        path: path.resolve(__dirname, "build"),
-        filename: "bundle.js",
-    },
-    devServer: {
-        port: 3000,
-        hot: true,
-        open: true,
-        allowedHosts: 'all',
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name].js",
+        library: "blockduck",
+        libraryTarget: "umd",
+        umdNamedDefine: true
     },
     resolve: {
         extensions: [".js", ".jsx"]
@@ -27,12 +24,17 @@ module.exports = {
         new ProvidePlugin({
             React: 'react'
         }),
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            inject: true,
-            template: path.join(__dirname, "public", "index.html")
+        new MiniCssExtractPlugin({
+            filename: "style.css",
         })
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin(),
+            new CssMinimizerPlugin()
+        ]
+    },
     module: {
         rules: [
             {
@@ -45,7 +47,7 @@ module.exports = {
             {
                 test: /.css$/i,
                 use: [
-                    {loader: "style-loader"},
+                    MiniCssExtractPlugin.loader,
                     {loader: "css-loader"},
                 ]
             },
