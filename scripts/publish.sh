@@ -32,4 +32,4 @@ git push --set-upstream origin "$CURRENT_BRANCH"
 git push --tags
 npm publish
 
-success "published $VERSION to npm"
+_success "published $VERSION to npm"
