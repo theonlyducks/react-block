@@ -1,7 +1,7 @@
 {
     "name": "@duck/react-block",
     "title": "React Block",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "private": false,
     "description": "Simple load integration blocking the UI",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -13,7 +13,7 @@
         "coveralls": "coveralls < ./coverage/lcov.info",
         "test": "jest",
         "test:coverage": "jest --coverage",
-        "release": "",
+        "release": "yarn test && ./scripts/release.sh",
         "publish": "yarn test && ./scripts/publish.sh",
         "build": "webpack --progress --config webpack.prod.config.js",
         "start": "webpack serve --progress --config webpack.dev.config.js"
