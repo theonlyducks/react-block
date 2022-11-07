@@ -2,8 +2,10 @@
 
 set -e
 
-PROJECT_VERSION=$(node -p -e "require('../package.json').version")
+PROJECT_VERSION="$(node -p -e "require('./package.json').version")"
 CURRENT_BRANCH="$(git symbolic-ref --short -q HEAD)"
+
+echo "$PROJECT_VERSION"
 
 _success() {
    echo -e "\033[00;32m[~Publish] => $1\033[00;0m"
@@ -25,9 +27,9 @@ fi
 
 git checkout main
 git fetch -p
-git pull orgin main
+git pull origin main
 yarn build
-git tag -a "$PROJECT_VERSION" -m "release $PROJECT_VERSION"
+git tag -a "v$PROJECT_VERSION" -m "release $PROJECT_VERSION"
 git push --set-upstream origin "$CURRENT_BRANCH"
 git push --tags
 npm publish
