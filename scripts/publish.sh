@@ -1,11 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -e
 
 PROJECT_VERSION="$(node -p -e "require('./package.json').version")"
 CURRENT_BRANCH="$(git symbolic-ref --short -q HEAD)"
 
-echo "$PROJECT_VERSION"
+echo "[~Publish] v$PROJECT_VERSION"
+
+rm -rf dist
 
 _success() {
    echo -e "\033[00;32m[~Publish] => $1\033[00;0m"

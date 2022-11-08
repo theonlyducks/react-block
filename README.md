@@ -29,7 +29,7 @@ yarn add react react-dom
 ### Installation
 
 ```shell
-yarn add @duck/react-block
+yarn add @theonlyducks/react-block
 ```
 
 ### Usage
@@ -37,8 +37,8 @@ yarn add @duck/react-block
 #### Example
 
 ```jsx
-import '@duck/react-block/style.css';
-import { BlockDuck } from "@duck/react-block";
+import '@theonlyducks/react-block/dist/style.css';
+import { BlockDuck } from "@theonlyducks/react-block";
 
 <BlockDuck blocking={true} >
     Hi!
