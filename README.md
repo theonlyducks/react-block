@@ -3,7 +3,7 @@
 > Simple load integration blocking the UI
 
 ![Version](https://img.shields.io/github/package-json/v/theonlyducks/react-block-duck)
-![Project Size](https://img.shields.io/bundlephobia/min/@duck/react-block@latest)
+![Project Size](https://img.shields.io/bundlephobia/min/@theonlyducks/react-block@latest)
 ![Dependencies](https://img.shields.io/github/languages/top/theonlyducks/react-block-duck)
 ![Licence](https://img.shields.io/github/license/theonlyducks/react-block-duck)
 
@@ -29,7 +29,7 @@ yarn add react react-dom
 ### Installation
 
 ```shell
-yarn add @duck/react-block
+yarn add @theonlyducks/react-block
 ```
 
 ### Usage
@@ -37,8 +37,8 @@ yarn add @duck/react-block
 #### Example
 
 ```jsx
-import '@duck/react-block/style.css';
-import { BlockDuck } from "@duck/react-block";
+import '@theonlyducks/react-block/dist/style.css';
+import { BlockDuck } from "@theonlyducks/react-block";
 
 <BlockDuck blocking={true} >
     Hi!
