@@ -10,8 +10,10 @@
 <img src="./preview.gif" width="500" height="auto">
 
 ## Table of contents
+
 - [Getting started](#getting-started)
 - [Documentation](#documentation)
+- [Development](#development)
 - [License](#license)
 
 ## Documentation
