@@ -1,3 +1,9 @@
+# Release 1.1.0
+
+### Implemented
+
+- Minimum size when no content
+
 # Release 1.0.0 (November 08, 2022)
 
 ## Implemented
