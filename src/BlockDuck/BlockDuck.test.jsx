@@ -71,6 +71,13 @@ describe('BlockDuck test component', () => {
             expect(loadingContainer).toBeInTheDocument();
         });
 
+        it('should render opacity', function () {
+            const { getByTestId } = render(<BlockDuck blocking opacity={4}>Opacity!</BlockDuck>);
+            const opacityContainer = getByTestId("opacity");
+            expect(opacityContainer).toBeInstanceOf(HTMLDivElement);
+            expect(opacityContainer).toBeInTheDocument();
+        });
+
         it('should contains message', function () {
             render(<BlockDuck tag="div" blocking message="Loading" >Hi!</BlockDuck>);
             const message = screen.getByText(/Loading/i);

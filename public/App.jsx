@@ -4,11 +4,11 @@ import { useState } from "react";
 import { BlockDuck } from "../src";
 
 export function App() {
-    const [blocking, setBlocking] = useState();
+    const [blocking, setBlocking] = useState(false);
     return (
         <div className="container">
             <div className="content">
-                <BlockDuck blocking={blocking}>
+                <BlockDuck blocking={blocking} opacity={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida augue a massa ornare
                     sollicitudin. Aliquam a tortor finibus, fermentum justo ut, lobortis nisl. Curabitur suscipit lectus
                     metus, feugiat pulvinar lectus viverra a. Praesent tincidunt, ex consequat tempus aliquet, turpis ex
