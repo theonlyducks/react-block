@@ -6,7 +6,8 @@ export type BlockDuckProps = React.HTMLAttributes<HTMLElement> & {
     loader?: React.ReactNode | string,
     message?: React.ReactNode | string,
     blocking?: boolean,
-    className?: string
+    className?: string,
+    opacity?: number
 }
 
 declare class BlockDuck extends React.Component<BlockDuckProps> { }

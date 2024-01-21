@@ -42,7 +42,10 @@ yarn add @theonlyducks/react-block
 import '@theonlyducks/react-block/dist/style.css';
 import { BlockDuck } from "@theonlyducks/react-block";
 
-<BlockDuck blocking={true} >
+<BlockDuck
+    opacity={5}
+    blocking={true}
+>
     Hi!
 </BlockDuck>
 ```

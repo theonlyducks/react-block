@@ -21,9 +21,6 @@
 .block-duck .block-duck__overlay {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    background-color: white;
 }
 
 .block-duck .block-duck__message {
