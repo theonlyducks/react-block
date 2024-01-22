@@ -1,8 +1,9 @@
-# Release 1.1.0
+# Release 1.1.0 (January 22, 2024)
 
 ### Implemented
 
 - Minimum size when no content
+- Custom Opacity for blocking
 
 # Release 1.0.0 (November 08, 2022)
 
